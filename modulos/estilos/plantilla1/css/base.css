@@ -1,0 +1,224 @@
+/* =========================== */
+/* ==                       == */
+/* ==        KEYNERS        == */
+/* ==                       == */
+/* ==  http://keyners.com/  == */
+/* =========================== */
+
+
+
+
+
+body {background: #fff !important; color: #585858 !important;}
+
+
+
+/*
+* Paragraf
+*/
+.contain p {font-size: 100%; font-weight: 300; color: #333; line-height: 22px;}
+.contain {margin:0; padding: 0; font-family: "Open Sans", Arial, sans-serif;}
+
+
+/*
+* Link
+*/
+.contain a, a:visited {text-decoration: none; color: #585858;}
+
+
+
+/*
+* Headings
+*/
+h1 {font-size: 1.8em; line-height: 1.23em;}
+h2 {font-size: 22px;}
+h3 {font-size: 24px; font-family: 'Crete Round', Georgia, serif; font-weight: 400; padding: 20px 0;}
+h4 {font-size: 18px;}
+h5 {font-size: 16px; padding-bottom: 10px;}
+h6 {font-size: 14px; padding-bottom: 10px; font-weight: bold;}
+
+h5 b {font-weight: bold;}
+
+
+/*
+* Lista NIE uporzadkowana UL
+*/
+
+
+/*
+* divs random
+*/
+.contain .clear, body .clear {width: 100%; float: left; clear: both; margin: 20px 0;}
+.one-third {text-align: center;}
+
+
+
+/*
+* Header 
+*/
+
+.header_2 .slogan {float:left;padding: 40px 0; padding-bottom: 100px;}
+.header_2 .slogan a.green {margin: 13px 0; padding: 10px 28px;}
+.header_2 p {color: #fff;}
+.header_2 h1, .header_2 h2, .header_2 h4 {vertical-align: middle; display: inline-block; clear: both;  text-align: left; color: #fff; text-shadow: 0 1px 1px rgba(0,0,0,.2); font-weight: 600;}
+.header_2 h1 {font-size: 3em; margin-bottom: 10px;}
+.header_2 h2 {font-size: 2em;}
+.header_2 h4 {font-weight: normal; margin-bottom: 10px;}
+
+.P1_img_titulo{
+	width: 120px;
+	height: 120px;
+	margin: 20px;
+	border-radius: 60px;
+}
+
+
+/*
+* Logo
+*/
+.logo a {color: #444; text-decoration: none; line-height: 20px;}
+.logo a:hover {color: #FF6A00;}
+
+
+
+
+/*
+* Menu
+*/
+
+
+
+
+
+/*
+* Orange
+*/
+.orange {width: 100%; float: left; clear: both; background: #ff6a00; margin: 50px 0; padding: 45px 0; color: #fff; text-align: center; position: relative;z-index: 1;}
+.orange h2 {width: 100%; margin: 20px 0 50px; text-align: center; text-shadow: none;}
+.orange p {width: 600px; margin: 0 auto 30px; color: #fff; text-align: center;}
+.orange a.dalej {display: block; width: 185px; background: #df4a00; color: #fff; margin: 0 auto 20px; padding: 10px 20px; font-size: 12px; text-transform: uppercase;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+}
+.orange a.dalej:hover {background: #fff; color: #ff6a00;}
+
+
+/*
+* Gray
+*/
+.gray {width: 100%; float: left; clear: both; background: #f6f6f6; margin: 50px 0; padding: 45px 0; position:relative; z-index:1;}
+
+
+
+
+/*
+* Form, input, label, textarea
+*/
+
+/*
+* Focus
+*/
+.focus h3 {margin-bottom: 15px;}
+.focus h4, .focus h3 {float: left; width: 100%; text-align: center; margin-bottom: 7px;}
+.focus p {text-align: center;}
+
+
+
+/*
+* Gallery
+*/
+.gallery a {width: 140px; height: 100px; overflow: hidden; float: left; margin: 5px; }
+.gallery a img {height: 95px;}
+
+
+
+
+/*
+* a#Top
+*/
+a#top {display: none; width: 7px; height: 17px; padding: 5px; position: fixed; bottom: 50px; right: 60px; z-index: 9; color: #fff; background: #ff6a00; font-size: 14px; font-weight: 300;}
+
+
+
+
+
+
+/*
+* BUTTONS
+*/
+.button {float: left; color: #fff; text-transform: uppercase; text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+
+	-webkit-transition: background .12s ease-in-out;
+    -moz-transition: background .12s ease-in-out;
+    -ms-transition: background .12s ease-in-out;
+    -o-transition: background .12s ease-in-out;
+    transition: background .12s ease-in-out;
+}
+
+
+.medium {font-size: 12px; margin: 5px 0; padding: 9px 14px 8px;}
+
+
+
+a.green {background: #45C491; color: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.2), 0 1px 0 0 rgba(255,255,255,.2) inset;
+	-moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2), 0 1px 0 0 rgba(255,255,255,.2) inset;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2), 0 1px 0 0 rgba(255,255,255,.2) inset;
+}
+a.green:hover {background: #36ae7e}
+
+
+/* -------------------
+*  RESPOSIVE ELEMENTS
+*  ------------------- */
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+
+	.header_2 h2 {display: none;}
+	.header_2 .slogan {padding-top: 40px;}
+
+	nav .contain .logo {margin-bottom: 20px; text-align: center;}
+
+	.orange p {width: 400px;}
+
+	form, label, input  {width: 400px;}
+	input[type="submit"] {width: 402px;}
+	textarea {width: 380px;}
+
+	.contain .one-third.column, .contain .eight.columns, .contain .four.columns {margin-bottom: 40px;}
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+	.header_2 h2, .header_2 .six.columns {display: none;}
+	.header_2 .slogan {padding: 30px 0;}
+
+
+	nav .contain .logo {margin-bottom: 20px; text-align: center;}
+
+	.orange p {width: 200px;}
+
+
+
+	form, label, input  {width: 300px;}
+	input[type="submit"] {width: 302px;}
+	textarea {width: 280px;}
+
+	.contain .one-third.column, .contain .eight.columns, .contain .four.columns {margin-bottom: 40px;}
+
+
+}
+
+
+
+
+
+
+
+
+

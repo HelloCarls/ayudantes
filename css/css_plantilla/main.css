@@ -1,0 +1,25 @@
+.stres{
+	width: 100%;
+	height: 300px;
+	color: #fff;
+	overflow: hidden;
+
+}
+.azul{
+	background: #00acaa;
+}
+
+.verde{
+	background: #2acc21;
+}
+.img_fondo{
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+.conte_fondo{
+	z-index: 2;
+}
+.index{
+	z-index: 3;
+}

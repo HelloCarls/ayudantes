@@ -1,0 +1,39 @@
+
+
+	Archivos moficados
+	
+		-*//includes/class/dbconn.php 
+		-*//js/form.js
+		-*//includes/class/mailsender.php
+		-*//header.php
+		-*//footer.php
+		-*//control.php
+		-*//includes/class/dbconsult.php
+		-*//login/dbconf.php
+		-*//imagenes/2.jpg
+		-*//imagenes/3.jpg
+		-*//modulos/create-web.php
+		-*//fileup.php
+
+
+
+
+	Modificacion de directorios 
+	
+		//plantilla1
+			*// eliminar	
+				-*//css/reset.css
+				-*//css/base.css
+				-*//css/skeleton.css
+				-*//css/layout.css
+
+
+	cargar Archivos
+
+		//cargar todos los archivos 
+			*// de
+				-*//modulos/estilos/plantilla1
+				-*//modulos/estilos/plantilla2
+				-*//modulos/estilos/plantilla3
+				-*//modulos/estilos/plantilla4
+			

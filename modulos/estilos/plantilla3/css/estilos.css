@@ -1,0 +1,24 @@
+
+body{
+	background: #fff !important;
+}
+
+.p3_caja{
+
+		height: 300px;
+		margin-bottom: 100px;
+		border-radius: 0px 0px 20px 20px;
+		color: #fff;
+	}
+
+.P3_img_titulo{
+	width: 120px;
+	height: 120px;
+	margin: 20px;
+	border-radius: 60px;
+}
+
+.p3_border{
+	border-left: 1px solid #8a8a8a;
+	border-right: 1px solid #8a8a8a;
+}

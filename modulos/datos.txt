@@ -1,0 +1,57 @@
+	control  		mame
+
+
+<------------- form_1 --------->
+
+	input text --> 		usuario
+	input text -->		password
+	input text -->		email
+	input radio -->  	selector
+	input text --> 		nombre
+	input text -->		apellido1
+	input text -->		apellido2
+	select -->			categoria
+	input text -->		direccion
+	input text -->		horario
+	input text -->		telefono
+	input text -->		direccion adicional
+	input text -->		red_social
+
+<------------ form_2 && 3 ---------->
+
+	input checbox -->  	precio[]
+	input file --> 		logo
+	input color --> 	color_fondo
+	texarea -->			descripcion
+	input checbox --> 	estilo
+
+
+TABLA 1 USERS. 
+
+ID | USUARIO | PASS | CORREO
+.........................
+
+TABLA 2 WEB.
+
+ID | ID_USUARIO | TIPO | NOMBRE |  APELLIDO(OPCIONAL) | APELLIDO2(OPCIONAL) | CATEGORIA | LOGO | COLOR_FONDO | DESCRIPCION | ESTILO
+..........................
+
+TABLA 3 DIRECIONES.
+
+ID | ID_WEB | DIRECCION
+...........................
+
+TABLA 4 HORARIOS.
+
+ID | ID_WEB | HORARIO | DIA_FESTIVO
+...........................
+
+TABLA 5 REDES_SOCIALES.
+
+ID | ID_WEB | TIPO_RED | NOMBRE_RED
+............................
+
+TABLA 6 SERVICIOS.
+
+ID | ID_WEB | TIPO SERVICIO | PRECIO
+............................
