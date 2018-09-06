@@ -7,7 +7,7 @@
   if (isset($_SESSION['username'])) {
 
     $mod_session = MODULO_SESSION;
-    $user = '<li><a href="resources/dashboard/"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['username'].'</a></li><li><a href="login/logout.php">Salir</a></li>';
+    $user = '<li><a href="index.php"><span class="glyphicon glyphicon-user"></span>'.$_SESSION['username'].'</a></li><li><a href="login/logout.php">Salir</a></li>';
 
   }else{
 

@@ -10,11 +10,34 @@ class DbConsult extends DbConn
             $db = new DbConn;
             $tbl = $db->tbl_web;
 
-            $stmt = $db->conn->prepare("SELECT * FROM ".$tbl." WHERE nombre_web = :param or URL = :param or id_usuario = :param");
+            if ($param == '*') {
+
+                $msql_consul = "SELECT * FROM ".$tbl;
+                $i = 0;
+
+            }else{
+
+                $msql_consul = "SELECT * FROM ".$tbl." WHERE nombre_web = :param or URL = :param or id_usuario = :param";
+
+            }
+            $stmt = $db->conn->prepare($msql_consul);
             $stmt->bindParam(':param', $param);
             $stmt->execute();
 
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (isset($i)) {
+                while ($e = $stmt->fetch(PDO::FETCH_ASSOC)) {
+               
+                    $result['webs'][$i] = $e;
+                    $i++;
+
+                }
+            }else{
+
+               $result = $stmt->fetch(PDO::FETCH_ASSOC);
+ 
+            }
+            
+            
             $err = "";
 
         } catch (PDOException $e) {
@@ -193,6 +216,29 @@ class DbConsult extends DbConn
         return $res;
     }
 
+    public function User_d($param){
+
+        try {
+
+            $db = new DbConn;
+            $tbl_members = $db->tbl_members;
+            // prepare sql and bind parameters
+            $stmt = $db->conn->prepare("SELECT * FROM ".$tbl_members." WHERE id = :param");
+            $stmt->bindParam(':param', $param);
+            $stmt->execute();
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $err = '';
+
+        } catch (PDOException $e) {
+
+            $err = "Error: " . $e->getMessage();
+
+        }
+
+        return $result;
+    }
     public function Tlf($id)
     {
         try {

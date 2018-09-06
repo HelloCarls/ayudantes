@@ -553,6 +553,10 @@
         padre.removeChild(cont_sms[i]);
         elemento = document.createElement('div');
 
+        var value_without_space = $.trim(resul[i].value);  
+
+        resul[i].value = value_without_space;
+
         tes = !/^\s+|\s+$/.test(resul[i].value);
 
         if (resul[i].value == '') {
@@ -577,10 +581,10 @@
         } 
 
         if (i == 1) {
-          regex = /(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+          regex = /^(?=\S*\d)(?=\S*[A-ZÑ])(?=\S*[a-zñ])\S{8,16}$/;
           if (!regex.test(resul[1].value)) {
             resp = false;
-            elemento.innerHTML = '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>La Contraseña es Insegura, Debe Contener: <br>* 8 Caracteres Alfanumericos <br>* Almenos una Mayuscula <br>* Almenos una Minuscula';
+            elemento.innerHTML = '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>La Contraseña es Insegura, Debe Contener: <br>* al menos 8 Caracteres Alfanumericos <br>* al menos una Mayuscula <br>* al menos una Minuscula';
             padre.className = 'form-group has-error has-feedback';
             padre.appendChild(elemento);
           }
@@ -734,11 +738,17 @@
         if(nun == 0){sms_nombre_web(null, '');}
         
       }else if(name.indexOf(' ') > -1){
-        sms_nombre_web(false, 'No debe contener espacios en blanco');
+      
+        if(nun == 0){sms_nombre_web(false, 'No debe contener espacios en blanco');
+                }else if(nun == 1){alert_modal('Error de Validacion', 'El nombre de la web no debe contener espacios en blanco');}
+
         enviar = false;
         
-      }else if(/[^A-Za-z0-9]/.test(name)){
-        sms_nombre_web(false, 'No debe contener caracteres especiales');
+      }else if(/[^A-Za-z0-9-_]/.test(name)){
+        
+        if(nun == 0){sms_nombre_web(false, 'No debe contener caracteres especiales');
+                }else if(nun == 1){alert_modal('Error de Validacion', 'El nombre de la web no debe contener caracteres especiales');}
+        
         enviar = false;
         
       }else{

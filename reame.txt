@@ -14,6 +14,8 @@
 		-*//imagenes/3.jpg
 		-*//modulos/create-web.php
 		-*//fileup.php
+		*//login/includes/loginform.php
+		*//config.php
 
 
 
@@ -26,6 +28,7 @@
 				-*//css/base.css
 				-*//css/skeleton.css
 				-*//css/layout.css
+				*//layouts/dashboard
 
 
 	cargar Archivos
@@ -36,4 +39,12 @@
 				-*//modulos/estilos/plantilla2
 				-*//modulos/estilos/plantilla3
 				-*//modulos/estilos/plantilla4
+				*//mosulos/session
+
+	    //cargar archivos nuevos
+
+	    	*//layouts/layout_session.php
+	    	*//modulos/session.php
+
+
 			

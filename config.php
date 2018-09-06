@@ -6,6 +6,7 @@
 	define('LAYOUT_DEFECTO', 'layout_simple.php');
 	define('MODULO_PATH', realpath('./modulos/'));
 	define('LAYOUT_PATH', realpath('./layouts/'));
+	
 
 
 	$conf['home'] = array(
@@ -13,8 +14,8 @@
 	       'layout' => LAYOUT_DEFECTO 
 	);
 	$conf['session'] = array(
-	       'archivo' => 'home_session.php',
-	       'layout'  => 'dashboard/index.php'
+	       'archivo' => 'session.php',
+	       'layout'  => 'layout_session.php'
 	);
 	$conf['404'] = array(
 	       'archivo' => '404.php',

@@ -6,7 +6,7 @@
 <br>
 <br>
 <h1 class="centrar">La web fue creada con exito</h1>
-<h5 class="centrar">Vizualiza tu web en: <a href="<?php echo 'http://localhost/'.$_POST['nombre_web'] ?>"><?php echo '/'.$_POST['nombre_web'] ?></a></h5>
+<h5 class="centrar">Vizualiza tu web en: <a href="<?php echo 'http://104.223.96.147/'.$_POST['nombre_web'] ?>"><?php echo 'http://104.223.96.147/'.$_POST['nombre_web'] ?></a></h5>
 
 <?php 
 

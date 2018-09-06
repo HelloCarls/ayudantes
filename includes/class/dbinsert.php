@@ -255,7 +255,7 @@ class DbInsert extends DbConn
             }  
 
         }
-
+        
         if (isset($datos['logo'])) {
 
             if ($datos['logo'] != '') {
