@@ -1,11 +1,11 @@
 
 <?php 
 
- if (isset($_SESSION['username'])) {
+// if (isset($_SESSION['username'])) {
 
-    header('location: index.php');
+  //  header('location: index.php');
 
-  }else{
+  //}else{
 
   	include('header.php');  
     include("slide.php");
@@ -16,6 +16,6 @@
 
     include('footer.php');
     
-  }
+//  }
       
 ?>

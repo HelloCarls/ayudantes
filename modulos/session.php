@@ -2,17 +2,24 @@
 
 if (isset($_SESSION['username'])) {
 
-	switch ($_SESSION['admin']) {
-		case 1:
-			include('modulos/session/admin/inicio.php');
-			break;
+	if (isset($_SESSION['admin'])) {
 		
-		default:
-			include('modulos/session/user/inicio.php');
-			break;
+		switch ($_SESSION['admin']) {
+			case 1:
+				include('modulos/session/admin/inicio.php');
+				break;
+			
+			default:
+				include('modulos/session/user/inicio.php');
+				break;
+		}
+	}else{
+		session_destroy();
+		die('Error al iniciar Sesion');
 	}
+	
 }else{
-	header('location: index.php');
+	header('location: /login');
 }
 
 

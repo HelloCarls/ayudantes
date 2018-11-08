@@ -16,24 +16,40 @@ $url = '/'.$_POST['nombre_web'];
 
 include DIR_PATH.'/includes/functions.php';
 
-$newid = uniqid(rand(), false);
-$newuser = $_POST['usuario'];
-$newpw = password_hash($_POST['password'], PASSWORD_DEFAULT);
-$pw1 = $_POST['password'];
-$newemail = $_POST['email'];
+
 
 $insert = new DbInsert;
 
+if(isset($_SESSION['username'])){
 
-echo 'Usuario Creado: ';
-echo $response = $insert->User($newuser, $newid, $newemail, $newpw);
-echo '<br/>';
+    $newid = $_SESSION['id'];
+    $newuser = $_SESSION['username'];
+    $newemail = $_SESSION['email'];
+    $response = 'true';
+
+}else{
+
+    $newid = uniqid(rand(), false);
+    $newuser = $_POST['usuario'];
+    $newpw = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $pw1 = $_POST['password'];
+    $newemail = $_POST['email'];
+
+    echo 'Usuario Creado: ';
+    echo $response = $insert->User($newuser, $newid, $newemail, $newpw);
+    echo '<br/>';
+
+    if ($response == 'true') {
+        $m = new MailSender;
+        $m->sendMail($newemail, $newuser, $newid, 'Verify');
+    }
+   
+}
+
+
 
 
 if ($response == 'true') {
-
-    $m = new MailSender;
-    $m->sendMail($newemail, $newuser, $newid, 'Verify');
 
     $_POST['id_usuario'] = $newid;
     $_POST['URL'] = $url;

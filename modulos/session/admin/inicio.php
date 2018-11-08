@@ -64,7 +64,7 @@ if (is_null($datos_web['logo'])) {
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><img src="imagenes/logo.png" width="130"></a>
+            <a href="/" class="logo"><img src="imagenes/logo.png" width="130"></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->

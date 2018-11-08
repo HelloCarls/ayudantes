@@ -5,22 +5,38 @@
 
           <h3 class="centrar">Registra Tus Datos</h3>
           <br>
-          
-          <div class="form-group" id="usuario">
-            <input type="text" class="form-control input_1 validar"  name="usuario" placeholder="Usuario (*)" required>
-            <div></div>
-          </div>
-          <div class="form-group" id="password">
-            <input type="password" class="form-control input_1 validar"  name="password" placeholder="Contraseña (*)" required>
-            <div></div>
-          </div>
+          <?php if(!isset($_SESSION['username'])){?>
+            <div class="form-group" id="usuario">
+              <input type="text" class="form-control input_1 validar"  name="usuario" placeholder="Usuario (*)" required>
+              <div></div>
+            </div>
+            <div class="form-group" id="password">
+              <input type="password" class="form-control input_1 validar"  name="password" placeholder="Contraseña (*)" required>
+              <div></div>
+            </div>
 
-          <div class="form-group" id="email">
-            <input type="email" class="form-control input_1 validar"  name="email" placeholder="Dirección de correo (*)" required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
-            <div></div>
-          </div>
-          
-          
+            <div class="form-group" id="email">
+              <input type="email" class="form-control input_1 validar"  name="email" placeholder="Dirección de correo (*)" required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+              <div></div>
+            </div>
+            <input type="hidden" name="session" value="1">
+          <?php }else{?>
+            <div class="form-group" id="usuario">
+              <input type="text" class="form-control input_1 validar"  name="usuario" placeholder="Usuario (*)" required value="<?php echo $_SESSION['username']?> " disabled>
+              <div></div>
+            </div>
+
+            <div class="form-group" id="password">
+              <input type="hidden" class="form-control input_1 validar"  name="password" placeholder="Contraseña (*)" required value="AS12as#$">
+              <div></div>
+            </div>
+
+            <div class="form-group" id="email">
+              <input type="email" class="form-control input_1 validar"  name="email" placeholder="Dirección de correo (*)" required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" value="<?php echo $_SESSION['email'] ?>" disabled>
+              <div></div>
+            </div>
+            <input type="hidden" name="session" value="0">
+          <?php } ?>
           
             <div class="form-group tipo_uso" id="tipo_de_uso" >
               <label for="tipo_uso"> Mi web es para:</label>

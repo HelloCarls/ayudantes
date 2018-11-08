@@ -25,7 +25,11 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
       include 'modulos/estilos/'.$_POST['estilo'].'/estilos.css';
     } ?>
     </style>
+    <?php
 
+    //die(var_dump($_SERVER['SERVER_NAME']));
+
+    ?>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -48,7 +52,7 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a href="index.php" class="navbar-brand"><img src="imagenes/logo.png"></a> 
+            <a href="/" class="navbar-brand"><img src="imagenes/logo.png"></a> 
           </div>
 
             <!-- inicia menu -->

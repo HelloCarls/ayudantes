@@ -673,38 +673,41 @@
 
       email = document.getElementsByName('email')[0].value;
       user = document.getElementsByName('usuario')[0].value;
-      pass = document.getElementsByName('password')[0].value;
+      session = document.getElementsByName('session')[0].value;
       
+      if (session == 1) {
+        url = "includes/consult_user.php";
 
-      url = "includes/consult_user.php";
+        $.ajax({
 
-      $.ajax({
+            type: "POST",
+            url: url,
+            data: "newuser="+user+"&email="+email,
+            success: function(html){
 
-          type: "POST",
-          url: url,
-          data: "newuser="+user+"&password="+pass+"&email="+email,
-          success: function(html){
+              var text = $(html).text();
+              //Pulls hidden div that includes "true" in the success response
+              var response = text.substr(text.length - 4);
 
-            var text = $(html).text();
-            //Pulls hidden div that includes "true" in the success response
-            var response = text.substr(text.length - 4);
+              if(response == "true"){
+                $('#sms').html('<div><div/>');
 
-            if(response == "true"){
-              $('#sms').html('<div><div/>');
+                pasar(1);
 
-              pasar(1);
+              }else {
 
-            }else {
+                $('#sms').html('<div class="alert alert-warning alert-dismissable sms">'+html+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>');
 
-              $('#sms').html('<div class="alert alert-warning alert-dismissable sms">'+html+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>');
-
+              }
+             
+            },
+            error: function(){
+                   alert("Ha ocurrido un error");
             }
-           
-          },
-          error: function(){
-                 alert("Ha ocurrido un error");
-          }
-      });    
+        });
+      }else{
+        pasar(1);
+      }    
   }
 
   function sms_nombre_web(bool, sms){

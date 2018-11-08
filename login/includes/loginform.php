@@ -53,6 +53,7 @@ class LoginForm extends DbConn
                     $_SESSION['username'] = $myusername;
                     $_SESSION['id'] = $result['id'];
                     $_SESSION['admin'] = $result['admin'];
+                    $_SESSION['email'] = $result['email'];
 
             } elseif (password_verify($mypassword, $result['password']) && $result['verified'] == '0') {
 
